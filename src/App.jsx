@@ -1,7 +1,6 @@
 import React from "react";
-import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Layout from "./Components/Layout/Layout.jsx";
+import Layout from "./components/Layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
