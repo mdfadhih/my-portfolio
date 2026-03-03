@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { featuredProjects } from "../data/projects.js";
-import ProjectCard from "../Components/ProjectCard/ProjectCard.jsx";
+import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 import "./Home.css";
 
 export default function Home() {

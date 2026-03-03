@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { projects } from "../data/projects.js";
-import ProjectCard from "../Components/ProjectCard/ProjectCard.jsx";
+import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 import "./Projects.css";
 
 export default function Projects() {
