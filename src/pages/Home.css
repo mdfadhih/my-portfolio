@@ -1,0 +1,42 @@
+.hero {
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
+  padding: 22px;
+  border-radius: 18px;
+}
+.kicker {
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.hero-title {
+  font-size: 42px;
+  margin: 0 0 10px;
+  line-height: 1.1;
+}
+.hero-lead {
+  max-width: 72ch;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+}
+.link {
+  color: #9ab6ff;
+}
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 34px;
+  }
+}
