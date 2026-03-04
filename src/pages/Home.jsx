@@ -4,6 +4,7 @@ import { featuredProjects } from "../data/projects.js";
 import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 import "./Home.css";
 import Page from "./page.jsx";
+import naricover from "../assets/images/nari/nari_cover.png";
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
         <section className="card featured-project">
           <div className="featured-grid">
             <img
-              src="src\assets\images\nari\nari_cover.png"
+              src={naricover}
               alt="Nari platform preview"
               className="featured-img"
             />
