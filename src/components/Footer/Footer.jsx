@@ -15,7 +15,7 @@ export default function Footer() {
           <a href="/resume.pdf" target="_blank">
             Resume
           </a>
-          <a href="mailto:your@email.com">Email</a>
+          <a href="mailto:mdfadhih377@gmail.com">Email</a>
           <a href="https://linkedin.com/in/mdfadhih" target="_blank">
             LinkedIn
           </a>
