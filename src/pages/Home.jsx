@@ -3,55 +3,70 @@ import { Link } from "react-router-dom";
 import { featuredProjects } from "../data/projects.js";
 import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 import "./Home.css";
+import Page from "./page.jsx";
 
 export default function Home() {
   return (
-    <div className="stack-lg">
-      <section className="hero">
-        <p className="kicker">Frontend / Full Stack Developer — Melbourne</p>
-        <h1 className="hero-title">I build clean, fast web apps with React.</h1>
-        <p className="hero-lead">
-          Sample text: I focus on React, APIs, and reliable deployments. I’m
-          open to junior roles and contract work.
-        </p>
+    <Page>
+      <div className="stack-lg">
+        <section className="hero">
+          <div className="accent-line" style={{ marginTop: 1 }}></div>
+          <p className="kicker">Frontend / Full Stack Developer — Melbourne</p>
+          <h1 className="hero-title">
+            I build modern React web apps and ship them end-to-end.
+          </h1>
+          <p className="hero-lead">
+            I focus on clean UI, API integration, and reliable deployments. My
+            portfolio includes Nari — a full-stack platform for discovering
+            mum-friendly workplaces and childcare services.
+          </p>
 
-        <div className="hero-actions">
-          <Link className="btn" to="/projects">
-            View Projects
-          </Link>
-          <a
-            className="btn btn-ghost"
-            href="https://www.linkedin.com/in/YOUR-LINKEDIN"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            className="btn btn-ghost"
-            href="https://github.com/YOUR-USERNAME"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </div>
-      </section>
+          <div className="hero-actions">
+            <Link className="btn btn-primary" to="/projects">
+              View Projects
+            </Link>
+            <a
+              className="btn btn-ghost"
+              href="https://www.linkedin.com/in/fadhih"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              className="btn btn-ghost"
+              href="https://github.com/mdfadhih"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              className="btn btn-ghost"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Resume
+            </a>
+          </div>
+        </section>
 
-      <section>
-        <div className="section-head">
-          <h2>Featured Projects</h2>
-          <Link className="link" to="/projects">
-            See all
-          </Link>
-        </div>
+        <section>
+          <div className="section-head">
+            <h2>Featured Projects</h2>
+            <Link className="link" to="/projects">
+              See all
+            </Link>
+          </div>
 
-        <div className="grid-3">
-          {featuredProjects.map((p) => (
-            <ProjectCard key={p.slug} project={p} />
-          ))}
-        </div>
-      </section>
-    </div>
+          <div className="grid-3">
+            {featuredProjects.map((p) => (
+              <ProjectCard key={p.slug} project={p} />
+            ))}
+          </div>
+        </section>
+      </div>
+    </Page>
   );
 }

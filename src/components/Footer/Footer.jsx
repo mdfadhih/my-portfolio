@@ -1,30 +1,32 @@
-import React from "react";
 import "./Footer.css";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container footer-inner">
-        <p className="footer-text">
-          © {new Date().getFullYear()} Mohamed — Built with React.
-        </p>
+      <div className="footer-inner container">
+        <div className="footer-left">
+          <strong>Mohamed Fadhih</strong>
+          <p className="footer-note">
+            Frontend / Full Stack Developer — Melbourne
+          </p>
+        </div>
+
         <div className="footer-links">
-          <a
-            href="https://github.com/YOUR-USERNAME"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
+          <a href="/resume.pdf" target="_blank">
+            Resume
           </a>
-          <a
-            href="https://www.linkedin.com/in/YOUR-LINKEDIN"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="mailto:your@email.com">Email</a>
+          <a href="https://linkedin.com/in/mdfadhih" target="_blank">
             LinkedIn
           </a>
-          <a href="mailto:you@email.com">Email</a>
+          <a href="https://github.com/mdfadhih" target="_blank">
+            GitHub
+          </a>
         </div>
+      </div>
+
+      <div className="footer-bottom">
+        © {new Date().getFullYear()} Mohamed Fadhih
       </div>
     </footer>
   );

@@ -1,19 +1,23 @@
+import nariCover from "../assets/images/nari/nari_cover.png";
+
 export const projects = [
   {
     slug: "nari",
-    title: "Nari — Women-focused Support Platform",
+    title: "Nari — Mum-Friendly Work & Childcare Finder",
     summary:
-      "Search mum-friendly workplaces and childcare services with filters, comparisons, and maps.",
-    stack: ["React", "Flask", "MySQL", "AWS", "Nginx"],
+      "A full-stack web platform that helps users discover mum-friendly workplaces and nearby childcare services using filters, comparisons, and map-based search.",
+    stack: ["React", "Flask", "MySQL", "AWS", "Nginx", "MapBoxApI"],
     featured: true,
+    image: nariCover,
     highlights: [
-      "Built filtering + comparison flow for companies.",
-      "Implemented map-based discovery for childcare/services.",
-      "Deployed with reverse proxy + database in production setup.",
+      "Built a searchable company directory with filtering (benefits, rating, location) and a comparison flow.",
+      "Implemented map-based discovery for childcare services with distance/location filtering.",
+      "Designed a REST API + relational schema for structured company and service data.",
+      "Deployed to a Linux server with Nginx reverse proxy and production configuration.",
     ],
     links: {
-      live: "https://YOUR-LIVE-LINK.com",
-      github: "https://github.com/YOUR-USERNAME/YOUR-REPO",
+      live: "https://gendereq.onrender.com",
+      github: "https://github.com/mdfadhih",
     },
   },
   {

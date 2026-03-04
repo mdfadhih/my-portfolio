@@ -1,11 +1,24 @@
 :root {
-  --bg: #0b0c10;
-  --surface: #11131a;
-  --text: #e8eaf2;
-  --muted: #b2b7c7;
-  --border: rgba(255, 255, 255, 0.12);
-  --radius: 16px;
+  /* Theme */
+  --bg: #060a14;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-2: rgba(255, 255, 255, 0.09);
+  --text: #eaf2ff;
+  --muted: rgba(234, 242, 255, 0.7);
+  --border: rgba(255, 255, 255, 0.14);
 
+  /* Accent: Blue + Cyan */
+  --accent: #45a3ff; /* blue */
+  --accent-2: #22d3ee; /* cyan */
+  --accent-3: #7c5cff; /* optional purple accent */
+
+  /* Layout */
+  --radius: 18px;
+  --radius-sm: 12px;
   --container: 1100px;
   --gap: 16px;
+
+  /* Shadows */
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.28);
 }

@@ -14,7 +14,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
 }
-
 @media (max-width: 900px) {
   .grid-3 {
     grid-template-columns: 1fr 1fr;
@@ -26,25 +25,121 @@
   }
 }
 
+/* Card */
 .card {
-  background: rgba(255, 255, 255, 0.04);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px;
+  box-shadow: var(--shadow-soft);
 }
+
+.btn:focus-visible,
+.input:focus-visible,
+.textarea:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, 0.35);
+  outline-offset: 2px;
+}
+
+/* Buttons */
 .btn {
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
   padding: 10px 12px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   display: inline-flex;
   gap: 8px;
   align-items: center;
   cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
 }
 .btn:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.24);
 }
+.btn:active {
+  transform: translateY(0);
+}
+
 .btn-ghost {
   background: transparent;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.btn-primary {
+  background: linear-gradient(
+    90deg,
+    rgba(69, 163, 255, 0.95),
+    rgba(34, 211, 238, 0.85)
+  );
+  border-color: rgba(69, 163, 255, 0.45);
+}
+.btn-primary:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(69, 163, 255, 1),
+    rgba(34, 211, 238, 0.95)
+  );
+}
+
+.btn-primary {
+  box-shadow: 0 10px 30px rgba(69, 163, 255, 0.18);
+}
+.btn-primary:hover {
+  box-shadow: 0 12px 34px rgba(34, 211, 238, 0.22);
+}
+
+/* Links */
+.link {
+  color: rgba(69, 163, 255, 0.95);
+}
+.link:hover {
+  color: rgba(34, 211, 238, 0.95);
+}
+
+/* Motion helpers */
+.fade-in {
+  animation: fadeIn 0.45s ease both;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle highlight line */
+.accent-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(69, 163, 255, 0.7),
+    rgba(34, 211, 238, 0.55),
+    transparent
+  );
+  border-radius: 999px;
+}
+
+.card {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(69, 163, 255, 0.22);
 }

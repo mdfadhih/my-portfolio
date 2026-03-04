@@ -1,41 +1,125 @@
 .hero {
-  border: 1px solid var(--border);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.06),
-    rgba(255, 255, 255, 0.03)
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    radial-gradient(
+      800px 380px at 18% 10%,
+      rgba(69, 163, 255, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      700px 340px at 82% 12%,
+      rgba(34, 211, 238, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.03)
+    );
+
+  padding: 26px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+
+  animation: heroIn 0.55s ease both;
+}
+
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Small glowing orb */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -180px;
+  top: -220px;
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.25),
+    transparent 60%
   );
-  padding: 22px;
-  border-radius: 18px;
+  filter: blur(2px);
+  pointer-events: none;
 }
+
 .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
   color: var(--muted);
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.18);
 }
+
+/* tiny dot */
+.kicker::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(69, 163, 255, 1),
+    rgba(34, 211, 238, 1)
+  );
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.25);
+}
+
 .hero-title {
-  font-size: 42px;
+  font-size: 46px;
   margin: 0 0 10px;
-  line-height: 1.1;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
+
 .hero-lead {
   max-width: 72ch;
+  font-size: 17px;
+  line-height: 1.75;
 }
+
+/* nicer spacing + alignment */
 .hero-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 14px;
+  margin-top: 18px;
 }
+
 .section-head {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 12px;
+  margin-top: 8px;
 }
+
+/* Let global/utilities control .link — avoid overriding it here */
 .link {
-  color: #9ab6ff;
+  text-decoration: none;
 }
+
 @media (max-width: 600px) {
+  .hero {
+    padding: 20px;
+  }
   .hero-title {
     font-size: 34px;
   }

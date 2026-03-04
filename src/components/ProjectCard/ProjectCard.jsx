@@ -5,6 +5,15 @@ import "./ProjectCard.css";
 export default function ProjectCard({ project }) {
   return (
     <div className="pcard">
+      {project.image && (
+        <div className="pcard-media">
+          <img
+            className="pcard-img"
+            src={project.image}
+            alt={`${project.title} preview`}
+          />
+        </div>
+      )}
       <div>
         <h3 className="pcard-title">{project.title}</h3>
         <p className="pcard-summary">{project.summary}</p>

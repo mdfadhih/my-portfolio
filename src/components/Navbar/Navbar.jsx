@@ -23,13 +23,6 @@ export default function Navbar() {
           >
             About
           </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Contact
-          </NavLink>
-
           <a
             className="btn btn-ghost"
             href="/resume.pdf"
