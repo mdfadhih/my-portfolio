@@ -52,6 +52,43 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="card featured-project">
+          <div className="featured-grid">
+            <img
+              src="src\assets\images\nari\nari_cover.png"
+              alt="Nari platform preview"
+              className="featured-img"
+            />
+
+            <div className="featured-info">
+              <h2>Featured Project</h2>
+
+              <h3>Nari — Mum-Friendly Work & Childcare Finder</h3>
+
+              <p>
+                A full-stack web platform helping users discover family-friendly
+                workplaces and childcare services. Users can filter companies,
+                compare workplace benefits, and discover childcare services
+                using location-based search.
+              </p>
+
+              <div className="featured-buttons">
+                <a className="btn btn-primary" href="/projects/nari">
+                  View Case Study
+                </a>
+
+                <a
+                  className="btn btn-ghost"
+                  href="https://gendereq.onrender.com"
+                  target="_blank"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section>
           <div className="section-head">
             <h2>Featured Projects</h2>

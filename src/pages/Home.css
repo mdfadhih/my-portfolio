@@ -124,3 +124,40 @@
     font-size: 34px;
   }
 }
+
+.featured-project {
+  margin-top: 30px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.featured-img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.featured-info h3 {
+  margin-bottom: 10px;
+}
+
+.featured-info p {
+  margin-bottom: 16px;
+}
+
+.featured-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
