@@ -1,4 +1,5 @@
 import nariCover from "../assets/images/nari/nari_cover.png";
+import serverlessCover from "../assets/images/serverless/serverless_cover.png";
 
 export const projects = [
   {
@@ -6,7 +7,7 @@ export const projects = [
     title: "Nari — Mum-Friendly Work & Childcare Finder",
     summary:
       "A full-stack web platform that helps users discover mum-friendly workplaces and nearby childcare services using filters, comparisons, and map-based search.",
-    stack: ["React", "Flask", "MySQL", "AWS", "Nginx", "MapBoxApI"],
+    stack: ["React", "Flask", "MySQL", "AWS", "Nginx", "MapBox API"],
     featured: true,
     image: nariCover,
     highlights: [
@@ -20,23 +21,36 @@ export const projects = [
       github: "https://github.com/mdfadhih",
     },
   },
+
   {
-    slug: "portfolio",
-    title: "Portfolio Website",
+    slug: "serverless-image-storage",
+    title: "Serverless Image Storage System",
     summary:
-      "This portfolio built with React + CSS, deployed on Vercel with scalable project pages.",
-    stack: ["React", "Vite", "CSS", "Vercel"],
+      "A cloud-native image gallery platform that stores images in AWS S3, automatically detects objects using YOLO, generates thumbnails, and enables tag-based image search.",
+    stack: [
+      "React",
+      "Typescript",
+      "AWS Lambda",
+      "API Gateway",
+      "S3",
+      "DynamoDB",
+      "YOLO",
+      "Vercel",
+    ],
     featured: true,
+    image: serverlessCover,
     highlights: [
-      "Clean recruiter-friendly layout.",
-      "Project pages generated from one data file.",
-      "Responsive UI with reusable components.",
+      "Built a serverless architecture using AWS Lambda, API Gateway, S3, and DynamoDB.",
+      "Implemented automatic object detection using YOLO to generate searchable image tags.",
+      "Created thumbnail generation pipeline using Lambda triggered by S3 uploads.",
+      "Developed React frontend for uploading, searching, editing tags, and deleting images.",
     ],
     links: {
-      live: "https://YOUR-PORTFOLIO.vercel.app",
-      github: "https://github.com/YOUR-USERNAME/my-portfolio",
+      live: "https://serverless-image-storage.vercel.app",
+      github: "https://github.com/mdfadhih/Cloud_Based_Image_Storage",
     },
   },
+
   {
     slug: "sample-dashboard",
     title: "Sample Dashboard",

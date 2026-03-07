@@ -10,6 +10,13 @@ import nariComlist from "../assets/images/nari/comlist.png";
 import naricomcare from "../assets/images/nari/comcare.png";
 import naricarechild from "../assets/images/nari/care.png";
 
+import serverlessCover from "../assets/images/serverless/serverless_cover.png";
+import serverlessSearchTag from "../assets/images/serverless/Tag.png";
+import serverlessSearchImage from "../assets/images/serverless/Image.png";
+import serverlessEdit from "../assets/images/serverless/edit-tags.png";
+import serverlessDelete from "../assets/images/serverless/delete.png";
+import serverlessImageUrl from "../assets/images/serverless/imageurl.png";
+
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
@@ -36,6 +43,13 @@ export default function ProjectDetail() {
   }
 
   const isNari = project.slug === "nari";
+  const isServerless = project.slug === "serverless-image-storage";
+
+  const heroImage = isNari
+    ? nariCover
+    : isServerless
+      ? serverlessCover
+      : project.image;
 
   return (
     <Page>
@@ -44,12 +58,11 @@ export default function ProjectDetail() {
           ← Back to projects
         </Link>
 
-        {/* ✅ ONE HERO ONLY */}
         <section className="project-hero">
-          {isNari && (
+          {heroImage && (
             <img
-              src={nariCover}
-              alt="Nari platform preview"
+              src={heroImage}
+              alt={`${project.title} preview`}
               className="project-hero-img"
             />
           )}
@@ -93,7 +106,6 @@ export default function ProjectDetail() {
           </div>
         </section>
 
-        {/* ✅ Screenshots only for Nari */}
         {isNari && (
           <section className="card">
             <h2>Product Screenshots</h2>
@@ -182,7 +194,158 @@ export default function ProjectDetail() {
           </section>
         )}
 
-        {/* ✅ Highlights separate card */}
+        {isServerless && (
+          <section className="card">
+            <h2>Product Screenshots</h2>
+
+            <div className="screenshot-grid">
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: serverlessCover,
+                    alt: "Serverless Homepage",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: serverlessCover,
+                    alt: "Serverless Homepage",
+                  })
+                }
+              >
+                <img src={serverlessCover} alt="Serverless app homepage" />
+                <span>Homepage</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: serverlessSearchTag,
+                    alt: "SearchByTag",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: serverless,
+                    alt: "SearchByTag",
+                  })
+                }
+              >
+                <img src={serverlessSearchTag} alt="Search images by tag" />
+                <span>SearchByTag</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: serverlessSearchImage,
+                    alt: "Search images by tag",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: serverlessSearchImage,
+                    alt: "Search images by tag",
+                  })
+                }
+              >
+                <img src={serverlessSearchImage} alt="Search images by tags" />
+                <span>Search images by tag</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: serverlessEdit,
+                    alt: "Edit Tags",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: serverlessEdit,
+                    alt: "Edit Tags",
+                  })
+                }
+              >
+                <img src={serverlessEdit} alt="Edit image tags" />
+                <span>Edit Tags</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: serverlessDelete,
+                    alt: "Delete Image",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: serverlessDelete,
+                    alt: "Delete Image",
+                  })
+                }
+              >
+                <img src={serverlessDelete} alt="Delete image flow" />
+                <span>Delete Image</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: serverlessImageUrl,
+                    alt: "ViewByImageUrl",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: serverlessImageUrl,
+                    alt: "ViewByImageUrl",
+                  })
+                }
+              >
+                <img src={serverlessImageUrl} alt="View By ImageUrl" />
+                <span>ViewByImageUrl</span>
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="card">
           <h2>Highlights</h2>
           <ul className="list">
@@ -192,7 +355,6 @@ export default function ProjectDetail() {
           </ul>
         </section>
 
-        {/* ✅ Case study only for Nari */}
         {isNari && (
           <section className="card stack-lg">
             <h2>Nari Case Study</h2>
@@ -252,7 +414,79 @@ export default function ProjectDetail() {
             </div>
           </section>
         )}
+
+        {isServerless && (
+          <section className="card stack-lg">
+            <h2>Serverless Image Storage Case Study</h2>
+
+            <div className="case-grid">
+              <div>
+                <h3>Problem</h3>
+                <p className="muted">
+                  Managing images at scale requires more than simple file
+                  uploads. Users need thumbnail previews, searchable metadata,
+                  efficient cloud storage, and the ability to detect objects
+                  automatically without manually tagging every image.
+                </p>
+              </div>
+
+              <div>
+                <h3>Solution</h3>
+                <p className="muted">
+                  I built a cloud-native serverless image management platform
+                  using React and AWS. The system uploads images to S3,
+                  generates thumbnails via Lambda, detects objects using YOLO,
+                  stores metadata in DynamoDB, and enables tag-based image
+                  search through a clean frontend.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3>Key Features</h3>
+              <ul>
+                <li>Image upload to Amazon S3 through a React frontend</li>
+                <li>Automatic thumbnail generation using AWS Lambda</li>
+                <li>Object detection with YOLO for searchable image tags</li>
+                <li>
+                  Search by tags, edit tags, delete image, and full-size URL
+                  retrieval
+                </li>
+                <li>Search by image workflow using detected objects</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Architecture</h3>
+              <ul>
+                <li>React + Vite frontend deployed on Vercel</li>
+                <li>API Gateway for REST endpoints</li>
+                <li>
+                  AWS Lambda functions for upload, thumbnail generation,
+                  detection, edit, search, and delete flows
+                </li>
+                <li>Amazon S3 for original images and thumbnails</li>
+                <li>DynamoDB for metadata and tag storage</li>
+                <li>YOLO model integration for image object detection</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Future Improvements</h3>
+              <ul>
+                <li>User authentication with AWS Cognito</li>
+                <li>
+                  Pagination and gallery state synchronization after
+                  upload/delete
+                </li>
+                <li>CloudFront CDN for faster image delivery</li>
+                <li>Image similarity search using embeddings</li>
+              </ul>
+            </div>
+          </section>
+        )}
       </div>
+
       <Lightbox
         open={lb.open}
         src={lb.src}
