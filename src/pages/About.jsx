@@ -126,7 +126,7 @@ export default function About() {
             target="_blank"
           >
             <span className="contact-label">LinkedIn</span>
-            <span className="contact-value">linkedin.com/in/mdfadhih</span>
+            <span className="contact-value">linkedin.com/in/fadhih</span>
           </a>
 
           <a
