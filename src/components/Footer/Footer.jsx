@@ -12,7 +12,10 @@ export default function Footer() {
         </div>
 
         <div className="footer-links">
-          <a href="/resume.pdf" target="_blank">
+          <a
+            href="/Mohamed_Fadhih_Frontend_Developer_Resume.pdf"
+            target="_blank"
+          >
             Resume
           </a>
           <a href="mailto:mdfadhih377@gmail.com">Email</a>

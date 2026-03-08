@@ -1,5 +1,6 @@
 import nariCover from "../assets/images/nari/nari_cover.png";
 import serverlessCover from "../assets/images/serverless/serverless_cover.png";
+import easyOrderCover from "../assets/images/easyorder/home.png";
 
 export const projects = [
   {
@@ -18,7 +19,7 @@ export const projects = [
     ],
     links: {
       live: "https://gendereq.onrender.com",
-      github: "https://github.com/mdfadhih",
+      github: "https://github.com/mdfadhih/GenderEq",
     },
   },
 
@@ -52,20 +53,29 @@ export const projects = [
   },
 
   {
-    slug: "sample-dashboard",
-    title: "Sample Dashboard",
+    slug: "easyorder",
+    title: "EasyOrder — Online Grocery Ordering Web App",
     summary:
-      "API-driven dashboard with sorting, filtering, loading states, and clean UI.",
-    stack: ["React", "REST API", "JavaScript"],
-    featured: false,
+      "A responsive grocery ordering platform where users can browse products, add items to a cart, calculate totals, and send orders directly through WhatsApp.",
+    stack: [
+      "React",
+      "JavaScript",
+      "Bootstrap",
+      "React Hooks",
+      "WhatsApp API",
+      "Vercel",
+    ],
+    featured: true,
+    image: easyOrderCover,
     highlights: [
-      "Reusable components and state handling.",
-      "Sorting + filtering + pagination template.",
-      "Error/loading handling patterns.",
+      "Developed a dynamic product catalog rendered from structured JSON datasets.",
+      "Implemented shopping cart logic with quantity management and real-time price calculations.",
+      "Built a WhatsApp order generation workflow that sends formatted order messages.",
+      "Designed responsive UI using React Bootstrap for mobile and desktop users.",
     ],
     links: {
-      live: "#",
-      github: "#",
+      live: "https://easy-order-one.vercel.app/",
+      github: "https://github.com/mdfadhih/EasyOrder",
     },
   },
 ];

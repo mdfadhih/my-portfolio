@@ -51,7 +51,7 @@ export default function About() {
           <div className="about-hero-actions">
             <a
               className="btn btn-ghost"
-              href="/resume.pdf"
+              href="/Mohamed_Fadhih_Frontend_Developer_Resume.pdf"
               target="_blank"
               rel="noreferrer"
             >
@@ -82,8 +82,8 @@ export default function About() {
           <div className="stat">
             <div className="stat-title">Featured</div>
             <div className="stat-value">
-              <Link className="link" to="/projects/nari">
-                Nari Case Study
+              <Link className="link" to="/projects/serverless-image-storage">
+                Serverless Image Storage Case Study
               </Link>
             </div>
           </div>

@@ -17,6 +17,11 @@ import serverlessEdit from "../assets/images/serverless/edit-tags.png";
 import serverlessDelete from "../assets/images/serverless/delete.png";
 import serverlessImageUrl from "../assets/images/serverless/imageurl.png";
 
+import easyOrderCover from "../assets/images/easyorder/home.png";
+import easyOrderProducts from "../assets/images/easyorder/product.png";
+import easyOrderCart from "../assets/images/easyorder/card.png";
+import easyOrderOrder from "../assets/images/easyorder/order.png";
+
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
@@ -44,12 +49,15 @@ export default function ProjectDetail() {
 
   const isNari = project.slug === "nari";
   const isServerless = project.slug === "serverless-image-storage";
+  const isEasyOrder = project.slug === "easyorder";
 
   const heroImage = isNari
     ? nariCover
     : isServerless
       ? serverlessCover
-      : project.image;
+      : isEasyOrder
+        ? easyOrderCover
+        : project.image;
 
   return (
     <Page>
@@ -229,7 +237,7 @@ export default function ProjectDetail() {
                   setLb({
                     open: true,
                     src: serverlessSearchTag,
-                    alt: "SearchByTag",
+                    alt: "Search By Tag",
                   })
                 }
                 role="button"
@@ -238,13 +246,13 @@ export default function ProjectDetail() {
                   e.key === "Enter" &&
                   setLb({
                     open: true,
-                    src: serverless,
-                    alt: "SearchByTag",
+                    src: serverlessSearchTag,
+                    alt: "Search By Tag",
                   })
                 }
               >
                 <img src={serverlessSearchTag} alt="Search images by tag" />
-                <span>SearchByTag</span>
+                <span>Search By Tag</span>
               </div>
 
               <div
@@ -253,7 +261,7 @@ export default function ProjectDetail() {
                   setLb({
                     open: true,
                     src: serverlessSearchImage,
-                    alt: "Search images by tag",
+                    alt: "Search by image tags",
                   })
                 }
                 role="button"
@@ -263,7 +271,7 @@ export default function ProjectDetail() {
                   setLb({
                     open: true,
                     src: serverlessSearchImage,
-                    alt: "Search images by tag",
+                    alt: "Search by image tags",
                   })
                 }
               >
@@ -325,7 +333,7 @@ export default function ProjectDetail() {
                   setLb({
                     open: true,
                     src: serverlessImageUrl,
-                    alt: "ViewByImageUrl",
+                    alt: "View By Image URL",
                   })
                 }
                 role="button"
@@ -335,12 +343,116 @@ export default function ProjectDetail() {
                   setLb({
                     open: true,
                     src: serverlessImageUrl,
-                    alt: "ViewByImageUrl",
+                    alt: "View By Image URL",
                   })
                 }
               >
-                <img src={serverlessImageUrl} alt="View By ImageUrl" />
-                <span>ViewByImageUrl</span>
+                <img src={serverlessImageUrl} alt="View By Image Url" />
+                <span>View By Image URL</span>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {isEasyOrder && (
+          <section className="card">
+            <h2>Product Screenshots</h2>
+
+            <div className="screenshot-grid">
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: easyOrderCover,
+                    alt: "EasyOrder Homepage",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: easyOrderCover,
+                    alt: "EasyOrder Homepage",
+                  })
+                }
+              >
+                <img src={easyOrderCover} alt="EasyOrder homepage" />
+                <span>Homepage</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: easyOrderProducts,
+                    alt: "Product Listing",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: easyOrderProducts,
+                    alt: "Product Listing",
+                  })
+                }
+              >
+                <img src={easyOrderProducts} alt="EasyOrder product list" />
+                <span>Product Listing</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: easyOrderCart,
+                    alt: "Shopping Cart",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: easyOrderCart,
+                    alt: "Shopping Cart",
+                  })
+                }
+              >
+                <img src={easyOrderCart} alt="EasyOrder shopping cart" />
+                <span>Shopping Cart</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({
+                    open: true,
+                    src: easyOrderOrder,
+                    alt: "WhatsApp Order Flow",
+                  })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({
+                    open: true,
+                    src: easyOrderOrder,
+                    alt: "WhatsApp Order Flow",
+                  })
+                }
+              >
+                <img src={easyOrderOrder} alt="EasyOrder WhatsApp order flow" />
+                <span>WhatsApp Order</span>
               </div>
             </div>
           </section>
@@ -481,6 +593,72 @@ export default function ProjectDetail() {
                 </li>
                 <li>CloudFront CDN for faster image delivery</li>
                 <li>Image similarity search using embeddings</li>
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {isEasyOrder && (
+          <section className="card stack-lg">
+            <h2>EasyOrder Case Study</h2>
+
+            <div className="case-grid">
+              <div>
+                <h3>Problem</h3>
+                <p className="muted">
+                  Small grocery businesses often need a simple online ordering
+                  workflow without building a full-scale e-commerce backend.
+                  Customers need a fast way to browse products, manage a cart,
+                  and place orders from mobile or desktop.
+                </p>
+              </div>
+
+              <div>
+                <h3>Solution</h3>
+                <p className="muted">
+                  EasyOrder provides a lightweight React-based grocery ordering
+                  experience where users can browse products, filter items,
+                  manage quantities, calculate totals in real time, and send
+                  their final order directly through WhatsApp.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3>Key Features</h3>
+              <ul>
+                <li>
+                  Dynamic grocery product catalog rendered from structured data
+                </li>
+                <li>
+                  Search and category-based navigation for easier browsing
+                </li>
+                <li>Shopping cart with quantity add/remove logic</li>
+                <li>Real-time subtotal, charge, and final total calculation</li>
+                <li>WhatsApp-based order generation workflow</li>
+                <li>Responsive UI for mobile and desktop users</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Architecture</h3>
+              <ul>
+                <li>React frontend with component-based UI structure</li>
+                <li>Bootstrap / React Bootstrap for responsive layout</li>
+                <li>
+                  Local JSON-style product dataset for rendering product cards
+                </li>
+                <li>WhatsApp deep-link integration for order submission</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Future Improvements</h3>
+              <ul>
+                <li>Replace placeholder images with optimized local assets</li>
+                <li>Add backend API and database for persistent orders</li>
+                <li>Implement authentication and admin dashboard</li>
+                <li>Add payment gateway and order history support</li>
               </ul>
             </div>
           </section>

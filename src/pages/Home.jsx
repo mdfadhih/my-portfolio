@@ -44,7 +44,7 @@ export default function Home() {
             </a>
             <a
               className="btn btn-ghost"
-              href="/resume.pdf"
+              href="/Mohamed_Fadhih_Frontend_Developer_Resume.pdf"
               target="_blank"
               rel="noreferrer"
             >
