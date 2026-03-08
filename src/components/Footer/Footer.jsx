@@ -19,7 +19,7 @@ export default function Footer() {
             Resume
           </a>
           <a href="mailto:mdfadhih377@gmail.com">Email</a>
-          <a href="https://linkedin.com/in/mdfadhih" target="_blank">
+          <a href="https://linkedin.com/in/fadhih" target="_blank">
             LinkedIn
           </a>
           <a href="https://github.com/mdfadhih" target="_blank">

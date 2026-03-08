@@ -31,7 +31,6 @@ export const projects = [
       github: "https://github.com/mdfadhih/Cloud_Based_Image_Storage",
     },
   },
-
   {
     slug: "nari",
     title: "Nari — Mum-Friendly Work & Childcare Finder",
