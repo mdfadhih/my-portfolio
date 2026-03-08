@@ -29,7 +29,7 @@ export default function Home() {
             </Link>
             <a
               className="btn btn-ghost"
-              href="https://www.linkedin.com/in/fadhih"
+              href="https://linkedin.com/in/fadhih"
               target="_blank"
               rel="noreferrer"
             >

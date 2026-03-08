@@ -122,7 +122,7 @@ export default function About() {
 
           <a
             className="contact-card"
-            href="https://linkedin.com/in/mdfadhih"
+            href="https://www.linkedin.com/in/fadhih"
             target="_blank"
           >
             <span className="contact-label">LinkedIn</span>
