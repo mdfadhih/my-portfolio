@@ -4,7 +4,8 @@ import { featuredProjects } from "../data/projects.js";
 import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 import "./Home.css";
 import Page from "./page.jsx";
-import naricover from "../assets/images/nari/nari_cover.png";
+
+import serverlesscover from "../assets/images/serverless/serverless_cover.png";
 
 export default function Home() {
   return (
@@ -56,7 +57,7 @@ export default function Home() {
         <section className="card featured-project">
           <div className="featured-grid">
             <img
-              src={naricover}
+              src={serverlesscover}
               alt="Nari platform preview"
               className="featured-img"
             />
@@ -64,23 +65,25 @@ export default function Home() {
             <div className="featured-info">
               <h2>Featured Project</h2>
 
-              <h3>Nari — Mum-Friendly Work & Childcare Finder</h3>
+              <h3>Serverless Image Storage System</h3>
 
               <p>
-                A full-stack web platform helping users discover family-friendly
-                workplaces and childcare services. Users can filter companies,
-                compare workplace benefits, and discover childcare services
-                using location-based search.
+                A cloud-native image gallery platform that stores images in AWS
+                S3, automatically detects objects using YOLO, generates
+                thumbnails, and enables tag-based image search.
               </p>
 
               <div className="featured-buttons">
-                <a className="btn btn-primary" href="/projects/nari">
+                <a
+                  className="btn btn-primary"
+                  href="/projects/serverless-image-storage"
+                >
                   View Case Study
                 </a>
 
                 <a
                   className="btn btn-ghost"
-                  href="https://gendereq.onrender.com"
+                  href="https://serverless-image-storage.vercel.app"
                   target="_blank"
                 >
                   Live Demo
