@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 import "./Home.css";
 import Page from "./page.jsx";
 
-import serverlesscover from "../assets/images/serverless/serverless_cover.png";
+import serverlesscover from "../assets/images/serverless/Aws-serverless.jpg";
 
 export default function Home() {
   return (

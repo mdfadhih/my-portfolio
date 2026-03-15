@@ -1,6 +1,9 @@
-import nariCover from "../assets/images/nari/nari_cover.png";
-import serverlessCover from "../assets/images/serverless/serverless_cover.png";
-import easyOrderCover from "../assets/images/easyorder/home.png";
+// import nariCover from "../assets/images/nari/nari_cover.png";
+// import serverlessCover from "../assets/images/serverless/serverless_cover.png";
+// import easyOrderCover from "../assets/images/easyorder/home.png";
+import serverlessCover from "../assets/images/serverless/Aws-serverless.jpg";
+import nariCover from "../assets/images/nari/care.png";
+import easyOrderCover from "../assets/images/easyorder/easyOrder.png";
 
 export const projects = [
   {

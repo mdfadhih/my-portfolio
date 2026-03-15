@@ -16,11 +16,13 @@ import serverlessSearchImage from "../assets/images/serverless/Image.png";
 import serverlessEdit from "../assets/images/serverless/edit-tags.png";
 import serverlessDelete from "../assets/images/serverless/delete.png";
 import serverlessImageUrl from "../assets/images/serverless/imageurl.png";
+import serverlessarc from "../assets/images/serverless/Aws-serverless.jpg";
 
 import easyOrderCover from "../assets/images/easyorder/home.png";
 import easyOrderProducts from "../assets/images/easyorder/product.png";
 import easyOrderCart from "../assets/images/easyorder/card.png";
 import easyOrderOrder from "../assets/images/easyorder/order.png";
+import easyorderFull from "../assets/images/easyorder/easyOrder.png";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -52,11 +54,11 @@ export default function ProjectDetail() {
   const isEasyOrder = project.slug === "easyorder";
 
   const heroImage = isNari
-    ? nariCover
+    ? naricarechild
     : isServerless
-      ? serverlessCover
+      ? serverlessarc
       : isEasyOrder
-        ? easyOrderCover
+        ? easyorderFull
         : project.image;
 
   return (
