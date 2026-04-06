@@ -12,22 +12,40 @@ const skillGroups = [
       "TypeScript",
       "HTML5",
       "CSS3",
+      "Tailwind CSS",
+      "Vite",
       "Accessibility (WCAG)",
     ],
   },
   {
-    title: "Backend & APIs",
-    items: ["Flask", "REST APIs", "SQL", "MySQL", "Postman"],
+    title: "Backend & AI",
+    items: [
+      "Node.js",
+      "Express",
+      "Gemini AI",
+      "RAG Pipelines",
+      "Vector Embeddings",
+      "REST APIs",
+      "Flask",
+      "SQL",
+      "MySQL",
+      "PostgreSQL",
+      "Supabase",
+      "Postman",
+    ],
   },
   {
     title: "DevOps & Tools",
     items: [
+      "Git/GitHub",
+      "GitHub Actions",
+      "CI/CD",
+      "Vercel",
+      "Render",
+      "AWS (EC2, S3)",
+      "Docker (basic)",
       "Linux",
       "Nginx",
-      "Git/GitHub",
-      "CI/CD",
-      "Docker (basic)",
-      "AWS (EC2, S3)",
     ],
   },
   {
@@ -37,6 +55,7 @@ const skillGroups = [
       "Debugging",
       "Performance (Lighthouse)",
       "Responsive Design",
+      "Security (OWASP)",
     ],
   },
 ];
@@ -51,7 +70,7 @@ export default function About() {
           <div className="about-hero-actions">
             <a
               className="btn btn-ghost"
-              href="/Mohamed_Fadhih_Frontend_Developer_Resume.pdf"
+              href="/Mohamed_Fadhih_FullStack_Developer_Resume.pdf"
               target="_blank"
               rel="noreferrer"
             >
@@ -64,26 +83,27 @@ export default function About() {
         </div>
 
         <p className="muted">
-          I’m Mohamed, a developer based in Melbourne focused on building clean,
-          responsive web apps with React. I like taking projects from idea →
-          implementation → deployment, with a secure-by-default mindset.
+          I'm Mohamed, a full stack developer based in Melbourne focused on
+          building AI-powered and secure web applications. I take projects from
+          idea → RAG pipeline → production deployment, combining React, Node.js
+          and Gemini AI to create real-world tools that actually work.
         </p>
 
         {/* Highlights */}
         <div className="about-stats">
           <div className="stat">
             <div className="stat-title">Focus</div>
-            <div className="stat-value">Frontend + API Integration</div>
+            <div className="stat-value">Full Stack + AI Engineering</div>
           </div>
           <div className="stat">
             <div className="stat-title">Strength</div>
-            <div className="stat-value">Clean UI + Deployment</div>
+            <div className="stat-value">RAG Pipelines + Clean UI</div>
           </div>
           <div className="stat">
             <div className="stat-title">Featured</div>
             <div className="stat-value">
-              <Link className="link" to="/projects/serverless-image-storage">
-                Serverless Image Storage Case Study
+              <Link className="link" to="/projects/docuchat">
+                DocuChat — AI Document Q&A
               </Link>
             </div>
           </div>
@@ -106,11 +126,11 @@ export default function About() {
         ))}
       </section>
 
-      {/* Looking for */}
+      {/* Contact + Looking For */}
       <section className="card">
         <h2>Contact</h2>
         <div className="contact-grid">
-          <a className="contact-card" href="mailto:your-email@example.com">
+          <a className="contact-card" href="mailto:mdfadhih377@gmail.com">
             <span className="contact-label">Email</span>
             <span className="contact-value">mdfadhih377@gmail.com</span>
           </a>
@@ -124,6 +144,7 @@ export default function About() {
             className="contact-card"
             href="https://www.linkedin.com/in/fadhih"
             target="_blank"
+            rel="noreferrer"
           >
             <span className="contact-label">LinkedIn</span>
             <span className="contact-value">linkedin.com/in/fadhih</span>
@@ -133,15 +154,17 @@ export default function About() {
             className="contact-card"
             href="https://github.com/mdfadhih"
             target="_blank"
+            rel="noreferrer"
           >
             <span className="contact-label">GitHub</span>
             <span className="contact-value">github.com/mdfadhih</span>
           </a>
         </div>
 
-        <h2>What I’m Looking For</h2>
+        <h2 style={{ marginTop: "1.5rem" }}>What I'm Looking For</h2>
         <ul className="about-list">
-          <li>Frontend / Full Stack Developer roles</li>
+          <li>Full Stack Developer or AI Engineer roles</li>
+          <li>Teams building AI-powered products or developer tools</li>
           <li>Teams that value learning, clean code, and shipping quality</li>
           <li>Melbourne (hybrid/onsite) or remote-friendly roles</li>
         </ul>

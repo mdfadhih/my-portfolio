@@ -24,6 +24,11 @@ import easyOrderCart from "../assets/images/easyorder/card.png";
 import easyOrderOrder from "../assets/images/easyorder/order.png";
 import easyorderFull from "../assets/images/easyorder/easyOrder.png";
 
+import docuChatCover from "../assets/images/docuchat/DocuChat.png";
+import docuChatUpload from "../assets/images/docuchat/upload.png";
+import docuChatChat from "../assets/images/docuchat/chat.png";
+import docuChatAnswer from "../assets/images/docuchat/chat.png";
+
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
@@ -52,6 +57,7 @@ export default function ProjectDetail() {
   const isNari = project.slug === "nari";
   const isServerless = project.slug === "serverless-image-storage";
   const isEasyOrder = project.slug === "easyorder";
+  const isDocuchat = project.slug === "docuchat";
 
   const heroImage = isNari
     ? naricarechild
@@ -59,7 +65,9 @@ export default function ProjectDetail() {
       ? serverlessarc
       : isEasyOrder
         ? easyorderFull
-        : project.image;
+        : isDocuchat
+          ? docuChatCover
+          : project.image;
 
   return (
     <Page>
@@ -116,10 +124,65 @@ export default function ProjectDetail() {
           </div>
         </section>
 
+        {/* ── DocuChat Screenshots ── */}
+        {isDocuchat && (
+          <section className="card">
+            <h2>Product Screenshots</h2>
+            <div className="screenshot-grid">
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({ open: true, src: docuChatCover, alt: "DocuChat UI" })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({ open: true, src: docuChatCover, alt: "DocuChat UI" })
+                }
+              >
+                <img src={docuChatCover} alt="DocuChat main interface" />
+                <span>Chat Interface</span>
+              </div>
+
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({ open: true, src: docuChatUpload, alt: "PDF Upload" })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({ open: true, src: docuChatUpload, alt: "PDF Upload" })
+                }
+              >
+                <img src={docuChatUpload} alt="DocuChat PDF upload screen" />
+                <span>PDF Upload</span>
+              </div>
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({ open: true, src: docuChatAnswer, alt: "AI Answer" })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({ open: true, src: docuChatAnswer, alt: "AI Answer" })
+                }
+              >
+                <img src={docuChatAnswer} alt="DocuChat AI answer streaming" />
+                <span>Streaming Answer</span>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ── Nari Screenshots ── */}
         {isNari && (
           <section className="card">
             <h2>Product Screenshots</h2>
-
             <div className="screenshot-grid">
               <div
                 className="shot"
@@ -136,7 +199,6 @@ export default function ProjectDetail() {
                 <img src={nariCover} alt="Nari homepage" />
                 <span>Homepage</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -152,7 +214,6 @@ export default function ProjectDetail() {
                 <img src={nariComlist} alt="Company directory and filters" />
                 <span>Company Filters</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -176,7 +237,6 @@ export default function ProjectDetail() {
                 <img src={naricomcare} alt="Company comparison" />
                 <span>Comparison</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -204,10 +264,10 @@ export default function ProjectDetail() {
           </section>
         )}
 
+        {/* ── Serverless Screenshots ── */}
         {isServerless && (
           <section className="card">
             <h2>Product Screenshots</h2>
-
             <div className="screenshot-grid">
               <div
                 className="shot"
@@ -232,7 +292,6 @@ export default function ProjectDetail() {
                 <img src={serverlessCover} alt="Serverless app homepage" />
                 <span>Homepage</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -256,7 +315,6 @@ export default function ProjectDetail() {
                 <img src={serverlessSearchTag} alt="Search images by tag" />
                 <span>Search By Tag</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -280,31 +338,21 @@ export default function ProjectDetail() {
                 <img src={serverlessSearchImage} alt="Search images by tags" />
                 <span>Search images by tag</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
-                  setLb({
-                    open: true,
-                    src: serverlessEdit,
-                    alt: "Edit Tags",
-                  })
+                  setLb({ open: true, src: serverlessEdit, alt: "Edit Tags" })
                 }
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) =>
                   e.key === "Enter" &&
-                  setLb({
-                    open: true,
-                    src: serverlessEdit,
-                    alt: "Edit Tags",
-                  })
+                  setLb({ open: true, src: serverlessEdit, alt: "Edit Tags" })
                 }
               >
                 <img src={serverlessEdit} alt="Edit image tags" />
                 <span>Edit Tags</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -328,7 +376,6 @@ export default function ProjectDetail() {
                 <img src={serverlessDelete} alt="Delete image flow" />
                 <span>Delete Image</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -356,10 +403,10 @@ export default function ProjectDetail() {
           </section>
         )}
 
+        {/* ── EasyOrder Screenshots ── */}
         {isEasyOrder && (
           <section className="card">
             <h2>Product Screenshots</h2>
-
             <div className="screenshot-grid">
               <div
                 className="shot"
@@ -384,7 +431,6 @@ export default function ProjectDetail() {
                 <img src={easyOrderCover} alt="EasyOrder homepage" />
                 <span>Homepage</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -408,7 +454,6 @@ export default function ProjectDetail() {
                 <img src={easyOrderProducts} alt="EasyOrder product list" />
                 <span>Product Listing</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -432,7 +477,6 @@ export default function ProjectDetail() {
                 <img src={easyOrderCart} alt="EasyOrder shopping cart" />
                 <span>Shopping Cart</span>
               </div>
-
               <div
                 className="shot"
                 onClick={() =>
@@ -460,6 +504,7 @@ export default function ProjectDetail() {
           </section>
         )}
 
+        {/* ── Highlights (all projects) ── */}
         <section className="card">
           <h2>Highlights</h2>
           <ul className="list">
@@ -469,10 +514,130 @@ export default function ProjectDetail() {
           </ul>
         </section>
 
+        {/* ── DocuChat Case Study ── */}
+        {isDocuchat && (
+          <section className="card stack-lg">
+            <h2>DocuChat Case Study</h2>
+
+            <div className="case-grid">
+              <div>
+                <h3>Problem</h3>
+                <p className="muted">
+                  Reading through long PDF documents to find specific
+                  information is slow and tedious. Users need to manually
+                  search, scroll, and cross-reference sections — especially for
+                  technical documents, research papers, and study materials.
+                </p>
+              </div>
+              <div>
+                <h3>Solution</h3>
+                <p className="muted">
+                  DocuChat uses RAG (Retrieval-Augmented Generation) to embed
+                  the entire document into a vector database, then uses semantic
+                  similarity search to find the most relevant sections and feeds
+                  them to Gemini AI as context. Users get accurate,
+                  document-grounded answers in seconds — not hallucinated
+                  responses.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3>Key Features</h3>
+              <ul>
+                <li>
+                  Drag and drop PDF upload with real-time progress feedback
+                </li>
+                <li>
+                  Automatic document-specific question suggestions after each
+                  upload
+                </li>
+                <li>
+                  Streaming AI responses — answers appear token by token in real
+                  time
+                </li>
+                <li>
+                  Semantic search — finds relevant context, not just keyword
+                  matches
+                </li>
+                <li>
+                  Multi-document support — uploading a new PDF clears previous
+                  data automatically
+                </li>
+                <li>
+                  Responsive design — works on mobile and desktop browsers
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>RAG Pipeline</h3>
+              <ul>
+                <li>
+                  PDF text extraction using pdf-parse with 500-word chunks and
+                  50-word overlap
+                </li>
+                <li>
+                  Vector embeddings generated with Gemini gemini-embedding-001
+                  (768 dimensions)
+                </li>
+                <li>
+                  Embeddings stored in Supabase PostgreSQL with pgvector
+                  extension
+                </li>
+                <li>
+                  Cosine similarity search in JavaScript to find top 4 relevant
+                  chunks
+                </li>
+                <li>
+                  RAG prompt built with retrieved context sent to
+                  gemini-2.0-flash
+                </li>
+                <li>
+                  Streaming response delivered via Server-Sent Events (SSE)
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Architecture</h3>
+              <ul>
+                <li>React + TypeScript frontend deployed on Vercel</li>
+                <li>
+                  Node.js + Express REST API deployed on Render (free tier)
+                </li>
+                <li>Google Gemini API for embeddings and answer generation</li>
+                <li>Supabase PostgreSQL with pgvector for vector storage</li>
+                <li>GitHub Actions CI/CD — auto-deploys on every git push</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Future Improvements</h3>
+              <ul>
+                <li>
+                  User authentication so each user has their own document
+                  workspace
+                </li>
+                <li>
+                  Support for multiple simultaneous documents with per-document
+                  search
+                </li>
+                <li>Conversation history and multi-turn chat memory</li>
+                <li>
+                  Source citations — highlight which page each answer came from
+                </li>
+                <li>Support for Word documents, PowerPoint and web URLs</li>
+                <li>Image and table extraction from PDFs</li>
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {/* ── Nari Case Study ── */}
         {isNari && (
           <section className="card stack-lg">
             <h2>Nari Case Study</h2>
-
             <div className="case-grid">
               <div>
                 <h3>Problem</h3>
@@ -483,7 +648,6 @@ export default function ProjectDetail() {
                   difficult to compare.
                 </p>
               </div>
-
               <div>
                 <h3>Solution</h3>
                 <p className="muted">
@@ -494,7 +658,6 @@ export default function ProjectDetail() {
                 </p>
               </div>
             </div>
-
             <div>
               <h3>Key Features</h3>
               <ul>
@@ -506,7 +669,6 @@ export default function ProjectDetail() {
                 <li>Responsive UI for mobile and desktop</li>
               </ul>
             </div>
-
             <div>
               <h3>Architecture</h3>
               <ul>
@@ -516,7 +678,6 @@ export default function ProjectDetail() {
                 <li>Linux + Nginx deployment</li>
               </ul>
             </div>
-
             <div>
               <h3>Future Improvements</h3>
               <ul>
@@ -529,10 +690,10 @@ export default function ProjectDetail() {
           </section>
         )}
 
+        {/* ── Serverless Case Study ── */}
         {isServerless && (
           <section className="card stack-lg">
             <h2>Serverless Image Storage Case Study</h2>
-
             <div className="case-grid">
               <div>
                 <h3>Problem</h3>
@@ -543,7 +704,6 @@ export default function ProjectDetail() {
                   automatically without manually tagging every image.
                 </p>
               </div>
-
               <div>
                 <h3>Solution</h3>
                 <p className="muted">
@@ -555,7 +715,6 @@ export default function ProjectDetail() {
                 </p>
               </div>
             </div>
-
             <div>
               <h3>Key Features</h3>
               <ul>
@@ -569,7 +728,6 @@ export default function ProjectDetail() {
                 <li>Search by image workflow using detected objects</li>
               </ul>
             </div>
-
             <div>
               <h3>Architecture</h3>
               <ul>
@@ -584,7 +742,6 @@ export default function ProjectDetail() {
                 <li>YOLO model integration for image object detection</li>
               </ul>
             </div>
-
             <div>
               <h3>Future Improvements</h3>
               <ul>
@@ -600,10 +757,10 @@ export default function ProjectDetail() {
           </section>
         )}
 
+        {/* ── EasyOrder Case Study ── */}
         {isEasyOrder && (
           <section className="card stack-lg">
             <h2>EasyOrder Case Study</h2>
-
             <div className="case-grid">
               <div>
                 <h3>Problem</h3>
@@ -614,7 +771,6 @@ export default function ProjectDetail() {
                   and place orders from mobile or desktop.
                 </p>
               </div>
-
               <div>
                 <h3>Solution</h3>
                 <p className="muted">
@@ -625,7 +781,6 @@ export default function ProjectDetail() {
                 </p>
               </div>
             </div>
-
             <div>
               <h3>Key Features</h3>
               <ul>
@@ -641,7 +796,6 @@ export default function ProjectDetail() {
                 <li>Responsive UI for mobile and desktop users</li>
               </ul>
             </div>
-
             <div>
               <h3>Architecture</h3>
               <ul>
@@ -653,7 +807,6 @@ export default function ProjectDetail() {
                 <li>WhatsApp deep-link integration for order submission</li>
               </ul>
             </div>
-
             <div>
               <h3>Future Improvements</h3>
               <ul>

@@ -4,8 +4,38 @@
 import serverlessCover from "../assets/images/serverless/Aws-serverless.jpg";
 import nariCover from "../assets/images/nari/care.png";
 import easyOrderCover from "../assets/images/easyorder/easyOrder.png";
+import Docuchatcover from "../assets/images/docuchat/Docuchat.png";
 
 export const projects = [
+  {
+    slug: "docuchat",
+    title: "DocuChat — AI-Powered Document Q&A",
+    summary:
+      "A full-stack RAG application that lets users upload any PDF and chat with it using natural language. Built a complete pipeline from PDF parsing to vector embeddings to streaming AI responses.",
+    stack: [
+      "React",
+      "Typescript",
+      "Node.js",
+      "Gemini AI",
+      "Supabase",
+      "pgvector",
+      "Vercel",
+      "Render",
+    ],
+    featured: true,
+    image: Docuchatcover,
+    highlights: [
+      "Built complete RAG pipeline: PDF parsing → chunking → vector embeddings → cosine similarity search → streaming LLM response",
+      "Integrated Google Gemini API for both 768-dim embedding generation and streaming answer generation",
+      "Implemented real-time streaming responses using Server-Sent Events (SSE)",
+      "Generated document-specific question suggestions automatically after each upload",
+      "Deployed with CI/CD — auto-deploys on every git push via GitHub Actions",
+    ],
+    links: {
+      live: "https://docuchat-navy.vercel.app",
+      github: "https://github.com/mdfadhih/Docuchat",
+    },
+  },
   {
     slug: "serverless-image-storage",
     title: "Serverless Image Storage System",

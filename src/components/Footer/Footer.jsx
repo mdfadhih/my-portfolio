@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-left">
           <strong>Mohamed Fadhih</strong>
           <p className="footer-note">
-            Frontend / Full Stack Developer — Melbourne
+            Full Stack Developer / AI Engineer — Melbourne
           </p>
         </div>
 

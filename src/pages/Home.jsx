@@ -6,6 +6,7 @@ import "./Home.css";
 import Page from "./page.jsx";
 
 import serverlesscover from "../assets/images/serverless/Aws-serverless.jpg";
+import Docuchatcover from "../assets/images/docuchat/Docuchat.png";
 
 export default function Home() {
   return (
@@ -13,14 +14,16 @@ export default function Home() {
       <div className="stack-lg">
         <section className="hero">
           <div className="accent-line" style={{ marginTop: 1 }}></div>
-          <p className="kicker">Frontend / Full Stack Developer — Melbourne</p>
+          <p className="kicker">
+            Full Stack Developer / AI Engineer — Melbourne
+          </p>
           <h1 className="hero-title">
-            I build modern React web apps and ship them end-to-end.
+            I build AI-powered web apps and ship them end-to-end.
           </h1>
           <p className="hero-lead">
-            I focus on clean UI, API integration, and reliable deployments. My
-            portfolio includes Nari — a full-stack platform for discovering
-            mum-friendly workplaces and childcare services.
+            I focus on clean UI, AI integration, and reliable deployments. My
+            latest project is DocuChat — a full-stack RAG application that lets
+            users chat with any PDF using Gemini AI and vector embeddings.
           </p>
 
           <div className="hero-actions">
@@ -45,7 +48,7 @@ export default function Home() {
             </a>
             <a
               className="btn btn-ghost"
-              href="/Mohamed_Fadhih_Frontend_Developer_Resume.pdf"
+              href="/Mohamed_Fadhih_FullStack_Developer_Resume.pdf"
               target="_blank"
               rel="noreferrer"
             >
@@ -57,7 +60,7 @@ export default function Home() {
         <section className="card featured-project">
           <div className="featured-grid">
             <img
-              src={serverlesscover}
+              src={Docuchatcover}
               alt="Nari platform preview"
               className="featured-img"
             />
@@ -65,25 +68,22 @@ export default function Home() {
             <div className="featured-info">
               <h2>Featured Project</h2>
 
-              <h3>Serverless Image Storage System</h3>
+              <h3>DocuChat — AI-Powered Document Q&A</h3>
 
               <p>
-                A cloud-native image gallery platform that stores images in AWS
-                S3, automatically detects objects using YOLO, generates
-                thumbnails, and enables tag-based image search.
+                A full-stack RAG application that lets users upload any PDF and
+                chat with it using natural language. Built a complete pipeline
+                from PDF parsing to vector embeddings to streaming AI responses.
               </p>
 
               <div className="featured-buttons">
-                <a
-                  className="btn btn-primary"
-                  href="/projects/serverless-image-storage"
-                >
+                <a className="btn btn-primary" href="/projects/docuchat">
                   View Case Study
                 </a>
 
                 <a
                   className="btn btn-ghost"
-                  href="https://serverless-image-storage.vercel.app"
+                  href="https://docuchat-navy.vercel.app/"
                   target="_blank"
                 >
                   Live Demo
