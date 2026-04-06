@@ -13,7 +13,7 @@ export default function Footer() {
 
         <div className="footer-links">
           <a
-            href="/Mohamed_Fadhih_Frontend_Developer_Resume.pdf"
+            href="/Mohamed_Fadhih_FullStack_Developer_Resume.pdf"
             target="_blank"
           >
             Resume

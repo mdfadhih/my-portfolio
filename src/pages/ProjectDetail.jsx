@@ -26,7 +26,7 @@ import easyorderFull from "../assets/images/easyorder/easyOrder.png";
 
 import docuChatCover from "../assets/images/docuchat/DocuChat.png";
 import docuChatUpload from "../assets/images/docuchat/upload.png";
-import docuChatChat from "../assets/images/docuchat/chat.png";
+// import docuChatChat from "../assets/images/docuchat/chat.png";
 import docuChatAnswer from "../assets/images/docuchat/chat.png";
 
 export default function ProjectDetail() {
