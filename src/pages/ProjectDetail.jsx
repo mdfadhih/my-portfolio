@@ -24,7 +24,7 @@ import easyOrderCart from "../assets/images/easyorder/card.png";
 import easyOrderOrder from "../assets/images/easyorder/order.png";
 import easyorderFull from "../assets/images/easyorder/easyOrder.png";
 
-import docuChatCover from "../assets/images/docuchat/DocuChat.png";
+import docuChatCover from "../assets/images/docuchat/Docuchat.png";
 import docuChatUpload from "../assets/images/docuchat/upload.png";
 // import docuChatChat from "../assets/images/docuchat/chat.png";
 import docuChatAnswer from "../assets/images/docuchat/chat.png";
