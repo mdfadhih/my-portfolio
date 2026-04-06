@@ -26,7 +26,7 @@ import easyorderFull from "../assets/images/easyorder/easyOrder.png";
 
 import docuChatCover from "../assets/images/docuchat/Docuchat.png";
 import docuChatUpload from "../assets/images/docuchat/upload.png";
-// import docuChatChat from "../assets/images/docuchat/chat.png";
+import docuChatcite from "../assets/images/docuchat/citation.png";
 import docuChatAnswer from "../assets/images/docuchat/chat.png";
 
 export default function ProjectDetail() {
@@ -174,6 +174,21 @@ export default function ProjectDetail() {
               >
                 <img src={docuChatAnswer} alt="DocuChat AI answer streaming" />
                 <span>Streaming Answer</span>
+              </div>
+              <div
+                className="shot"
+                onClick={() =>
+                  setLb({ open: true, src: docuChatcite, alt: "AI Citation" })
+                }
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) =>
+                  e.key === "Enter" &&
+                  setLb({ open: true, src: docuChatcite, alt: "AI Citation" })
+                }
+              >
+                <img src={docuChatAnswer} alt="DocuChat AI answer streaming" />
+                <span>Citation</span>
               </div>
             </div>
           </section>
